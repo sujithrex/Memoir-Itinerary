@@ -1,4 +1,7 @@
 # Memoir Itinerary
+
+## Django Application
+### Background
  A Pretty, Minimalistic  History Journal
 
 Simplified and Streamlined !! 
@@ -24,3 +27,14 @@ The Prime thing to write a history is source, but we cannot remember all the sou
 When I read his records, he never cared about forgetting issues. He tracks the records with some specific tags and dates. If he wants to write a specific time or place or issues he can track the records with tags and dates. Literally he used the book keeping techniques to write history. He is a clergyman who has amazing language skills. It helps him a lot to write a poetic and prose presentation of history from the sick records. 
 
 Well, I learned a lot from his records. But can I use his strategy as it is ? Yeah but we live in the modern era buth!! So I planned to digitize his strategy to keep records digitally. So I programmed a tool which is a replica of Rev. Christdoss’ personal ledger. 
+
+
+
+
+## How to Setup on LOCAL
+###mysql server must
+1. OPEN CMD ON ROOT 
+2. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+3. venv\Scripts\Activate.ps1 (ACTIVATE ENVIRONMENT)
+4. python manage.py migrate (FOR DATABASE)
+5. python manage.py createsuperuser (FOR ADMIN)
