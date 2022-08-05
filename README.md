@@ -1,5 +1,5 @@
 # Memoir Itinerary
- A Pretty, Minimalistic  History Journal Cancel changes
+ A Pretty, Minimalistic  History Journal
 
 Simplified and Streamlined !! 
 
