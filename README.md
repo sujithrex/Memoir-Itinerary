@@ -1,4 +1,7 @@
 # Memoir Itinerary
+
+## Django Application
+
  A Pretty, Minimalistic  History Journal
 
 Simplified and Streamlined !! 
