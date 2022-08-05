@@ -1,0 +1,49 @@
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <div class='container'>
+    <br/>
+    <table class="table table-bordered" id="example" style="text-align: center;">
+    <thead>
+        <tr>
+            <th style = "width: 3%">ID</th>
+            <th style = "width: 10%">Date</th>
+            <th style = "width: 10%">Event</th>
+            <th style = "width: 10%">Adobe</th>
+            <th style = "width: 24%">Record</th>
+            <th style = "width: 10%">Main Characters</th>
+            <th style = "width: 10%">Source</th>
+            <th style = "width: 10%">Note</th>
+            <th style = "width: 13%">Edit / Delete</th>
+
+        </tr>
+
+
+    </thead>
+
+    {% for record in records %}
+    <tr>
+
+        <td> {{ record.id }}</td>
+        <td>{{ record.date }}</td>
+        <td>{{ record.eventname }}</td>
+        <td>{{ record.adobe }}</td>
+        <td>{{ record.record }}</td>
+        <td>{{ record.hero }}</td>
+        <td>{{ record.source }}</td>
+        <td>{{ record.note }}</td>
+        <td><ul class="list-inline m-0">
+                                                <li class="list-inline-item">
+                                                    <a href="{% url 'view_items' record.id %}">{{instance.item_name}}<button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button></a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a href="{% url 'update_items' record.id %}"><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit" ><i class="fa fa-edit"></i></button></a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a href="{% url 'delete_items' record.id %}"><button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></a>
+                                                </li>
+                                            </ul></td>
+    </tr>  
+
+    {% endfor %} 
+    </table>
+    
+ </div>

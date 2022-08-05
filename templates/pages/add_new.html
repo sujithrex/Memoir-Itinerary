@@ -1,0 +1,23 @@
+
+{% extends 'base/master.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Add New{% endblock title %}
+
+{% block content %}
+
+
+    <link href="{% static 'css/add.css' %}" rel="stylesheet">
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+
+
+<form method='POST' action='' autocomplete="off">{% csrf_token %}
+		{{form|crispy}}
+        <input type="submit" value='Save'/>
+    </form>
+<div/>
+<div/>
+{% endblock content %}

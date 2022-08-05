@@ -1,0 +1,21 @@
+{% extends 'base/master.html' %}
+{% load crispy_forms_tags %}
+
+
+
+{% load static %}
+{% block title %}Add New{% endblock title %}
+
+{% block content %}
+
+<form method='POST'>
+{% csrf_token %}
+From: <input type='date' name='fromdate'/>
+To: <input type='date' name='todate'/>
+
+        <input type="submit" value='Search'/>
+
+ {% include 'base/table.html' %} 
+
+
+{% endblock content %}

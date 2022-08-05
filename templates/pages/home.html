@@ -1,0 +1,33 @@
+{% extends 'base/master.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block content %}
+ {% include 'base/cards.html' %} 
+
+<hr>
+        <h2>Daily Events</h2>
+        <h6>Find What's Happened today in your records</h6>
+        <br/>
+         
+  <div class="card-columns mb-3">
+  {% for record in records %}
+    {% comment %} <div class="card card-block card-inverse card-primary text-center">
+            <blockquote class="card-blockquote">
+              <p>{{ record.record }}</p>
+              <footer>
+                <small> <cite title="{{ record.eventname }}"></cite></small>
+              </footer>
+            </blockquote>
+    </div> {% endcomment %}
+    <div class="card card-block  card-light text-center">
+            <blockquote class="card-blockquote">
+              <p>{{ record.record }}</p>
+              <footer>
+                <small> <cite title="{{ record.eventname }}"></cite></small>
+              </footer>
+            </blockquote>
+    </div>
+{% endfor %} 
+    
+  </div>
+{% endblock content %}
